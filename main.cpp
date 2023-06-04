@@ -36,6 +36,29 @@ int main(){
     cin >> num2;
 
     //This could be done without new functions for each operator but I wanted to test using functions
+   
+    switch(op){
+        case '+':
+            answer = add(num1,num2);
+            break;
+        case '-':
+            answer = subtract(num1,num2);
+            break;
+        case '*':
+            answer = multiply(num1,num2);
+            break;
+        case '/':
+            answer = divide(num1,num2);
+            break;
+        default:
+             cout << "Invalid Operator";
+            return 0;
+    }
+
+    /*
+    How I would do this problem with if statements.
+    However a swich case is best for this
+
     if(op == '+'){
         answer = add(num1,num2);
     }
@@ -51,8 +74,8 @@ int main(){
     else{
         cout << "Invalid Operator";
         return 0;
-    }
-    
+    } */
+
     cout << endl << num1 << op << num2 << " = " << answer << endl;
 
     cout << "Want to calculate another number? y/n" << endl;

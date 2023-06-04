@@ -2,4 +2,4 @@
 
 This is the first of many small programs I will write while learning C++
 
-I am just uploading to github to keep things orginized and so I can see my progress over time
+I am just uploading to github to keep things organized and so I can see my progress over time
