@@ -24,6 +24,7 @@ int main(){
     double num1, num2;
     char op;
     double answer;
+    char yesOrNo;
 
     cout << "Enter first number: ";
     cin >> num1;
@@ -34,6 +35,7 @@ int main(){
     cout << "Enter second number: ";
     cin >> num2;
 
+    //This could be done without new functions for each operator but I wanted to test using functions
     if(op == '+'){
         answer = add(num1,num2);
     }
@@ -46,7 +48,20 @@ int main(){
     else if(op == '/'){
         answer = divide(num1,num2);
     }
+    else{
+        cout << "Invalid Operator";
+        return 0;
+    }
     
-    cout << endl << num1 << op << num2 << " = " << answer;
-    return 0;
+    cout << endl << num1 << op << num2 << " = " << answer << endl;
+
+    cout << "Want to calculate another number? y/n" << endl;
+    cin >> yesOrNo;
+
+    if(yesOrNo == 'y'){
+        main();
+    }
+    else{
+        return 0;
+    }
 }
